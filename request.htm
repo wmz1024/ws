@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>request</title>
   </head>
   <body>
     <script>
@@ -20,31 +20,37 @@
       }
     </script>
     <script>
-      if (sname == "helloworld") {
-        document.write(
-          "<h1>hello world</h1><h3><a href='http://w.wmz.link/?i=download'>下载页面</a></h3>"
-        );
-      } else if (sname == "download") {
+      if (sname == "d") {
         function GetQueryString(api2) {
           var reg = new RegExp("(^|&)" + api2 + "=([^&]*)(&|$)");
           var r = decodeURI(window.location.search.substr(1)).match(reg);
           if (r != null) return unescape(r[2]);
           return null;
         }
-        var sname2 = GetQueryString("d");
-        if (sname2 != null) {
-          var sname_ = decodeURIComponent(sname2);
+        var sname1 = GetQueryString("time");
+        if (sname1 != null) {
+          var sname_ = decodeURIComponent(sname1);
         }
-        if (sname2 == "tuladingkms") {
-          window.location.href = "http://w.wmz.link/download/kms.exe";
-        } else {
-          document.write(
-            '<h3><a href="http://w.wmz.link/?i=download&d=tuladingkms">下载图拉丁kms</a></h3>'
-          );
+        if (sname1 == "1619254800") {
+          function GetQueryString(api23) {
+            var reg = new RegExp("(^|&)" + api23 + "=([^&]*)(&|$)");
+            var r = decodeURI(window.location.search.substr(1)).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+          }
+          var sname2 = GetQueryString("from");
+          if (sname2 != null) {
+            var sname_ = decodeURIComponent(sname2);
+          }
+          if (sname2 == "qq") {
+            window.location.href =
+              "https://shimo.im/forms/xgY66JVYVc9Kgkp6/fill?channel=qq";
+          }
+          else{document.write("error")}
         }
-      } else {
-        window.location.href = "http://w.wmz.link/?i=helloworld";
+        else{document.write("error")}
       }
+      else{document.write("error")}
     </script>
   </body>
 </html>
