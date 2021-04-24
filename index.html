@@ -24,6 +24,27 @@ if (sname != null) {
         {
             document.write("<h1>hello world</h1>")
         }
+        else if (sname=="download")
+        {
+            function GetQueryString(api2) {
+    var reg = new RegExp("(^|&)" + api2 + "=([^&]*)(&|$)");
+    var r = decodeURI(window.location.search.substr(1)).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+}
+var sname2 = GetQueryString("d");
+if (sname2 != null) {
+    var sname_ = decodeURIComponent(sname);
+}
+            if (sname2=="tuladingkms")
+            {
+                window.location.href="http://w.wmz.link/download/kms.exe"
+            }
+            else{
+                document.write('<h3><a href="http://w.wmz.link/?i=download&d=tuladingkms">下载图拉丁kms</a></h3>')
+            }
+
+        }
         else {
             window.location.href="http://w.wmz.link/?i=helloworld"
         }
